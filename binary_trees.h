@@ -57,4 +57,12 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 
+/**
+ * binary_tree_delete - a function that deletes an entire binary tree
+ * @parent: Pointer to tree.
+ *
+ * Return: void
+ */
+void binary_tree_delete(binary_tree_t *tree);
+
 #endif /* BINARY_TREES_H */
