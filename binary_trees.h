@@ -65,4 +65,12 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
  */
 void binary_tree_delete(binary_tree_t *tree);
 
+/**
+ * binary_tree_is_leaf -  checks if a node is a leaf.
+ * @node: Pointer to the node to check.
+ *
+ * Return: 1 if it's leaf, otherwise 0 when it's not or it's NULL.
+ */
+int binary_tree_is_leaf(const binary_tree_t *node);
+
 #endif /* BINARY_TREES_H */
