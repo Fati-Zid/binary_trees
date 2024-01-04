@@ -48,4 +48,13 @@ void binary_tree_print(const binary_tree_t *tree);
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 
+/**
+ * binary_tree_insert_right - Inserts a node as the right-child of another node.
+ * @parent: Pointer to the parent node.
+ * @value: Value to be assigned to the new node.
+ *
+ * Return: A pointer to the newly created node, or NULL on failure.
+ */
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+
 #endif /* BINARY_TREES_H */
