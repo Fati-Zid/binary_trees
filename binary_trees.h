@@ -73,4 +73,12 @@ void binary_tree_delete(binary_tree_t *tree);
  */
 int binary_tree_is_leaf(const binary_tree_t *node);
 
+/**
+ * binary_tree_is_root -  checks if a node is a root.
+ * @node: Pointer to the node to check.
+ *
+ * Return: 1 if it's root, otherwise 0 when it's not or it's NULL.
+ */
+int binary_tree_is_root(const binary_tree_t *node);
+
 #endif /* BINARY_TREES_H */
