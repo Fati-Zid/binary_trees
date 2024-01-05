@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+
 /**
  * bst_search - search for a special value in the tree and return the node
  * @tree: tree to go through
