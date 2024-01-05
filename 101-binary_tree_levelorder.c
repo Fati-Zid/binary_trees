@@ -43,7 +43,7 @@ void linked_node(link_t **head, const binary_tree_t *tree, size_t level)
 {
 	link_t *new, *aux;
 
-	new = malloc(sizeof(link_t));
+	new = (link_t*) malloc(sizeof(link_t));
 	if (new == NULL)
 	{
 		return;
@@ -66,6 +66,7 @@ void linked_node(link_t **head, const binary_tree_t *tree, size_t level)
 		aux->next = new;
 	}
 }
+
 /**
  * recursion - goes through the complete tree and each stores each node
  * in linked_node function
@@ -85,6 +86,7 @@ void recursion(link_t **head, const binary_tree_t *tree)
 		recursion(head, tree->right);
 	}
 }
+
 /**
  * binary_tree_levelorder - print the nodes element in a lever-order
  * @tree: root node
@@ -94,13 +96,10 @@ void recursion(link_t **head, const binary_tree_t *tree)
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	link_t *head, *aux;
-	size_t height = 0, count = 0;
+	size_t height = 0;
+    size_t count = 0;
 
-	if (!tree || !func)
-	{
-		return;
-	}
-	else
+	if (tree != NULL && func != NULL)
 	{
 		height = binary_tree_height(tree);
 		head = NULL;
