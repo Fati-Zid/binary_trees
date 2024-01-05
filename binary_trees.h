@@ -17,10 +17,10 @@
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 };
 
 typedef struct binary_tree_s binary_tree_t;
@@ -54,7 +54,8 @@ void binary_tree_print(const binary_tree_t *tree);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 
 /**
- * binary_tree_insert_right - Inserts a node as the right-child of another node.
+ * binary_tree_insert_right - Inserts a node as the right-child
+ * of another node.
  * @parent: Pointer to the parent node.
  * @value: Value to be assigned to the new node.
  *
@@ -87,26 +88,29 @@ int binary_tree_is_leaf(const binary_tree_t *node);
 int binary_tree_is_root(const binary_tree_t *node);
 
 /**
- * binary_tree_preorder -  function that goes through a binary tree using pre-order traversal.
+ * binary_tree_preorder -  function that goes through
+ * a binary tree using pre-order traversal.
  * @tree: is a pointer to the root node of the tree to traverse.
- * @func:is a pointer to a function to call for each node. 
+ * @func: is a pointer to a function to call for each node. 
  * Return: void.
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 
 /**
- * binary_tree_inorder -  function that goes through a binary tree using in-order traversal.
+ * binary_tree_inorder -  function that goes through
+ * a binary tree using in-order traversal.
  * @tree: is a pointer to the root node of the tree to traverse.
- * @func:is a pointer to a function to call for each node. 
+ * @func: is a pointer to a function to call for each node. 
  * Return: void.
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 
 
 /**
- * binary_tree_postorder -  function that goes through a binary tree using post-order traversal.
+ * binary_tree_postorder -  function that goes through
+ * a binary tree using post-order traversal.
  * @tree: is a pointer to the root node of the tree to traverse.
- * @func:is a pointer to a function to call for each node. 
+ * @func: is a pointer to a function to call for each node. 
  * Return: void.
  */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
@@ -257,7 +261,8 @@ bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
 
 /**
- * bst_remove - Removes a node with a specific value from a Binary Search Tree (BST).
+ * bst_remove - Removes a node with a specific value from
+ * a Binary Search Tree (BST).
  * @root: Pointer to the root of the BST.
  * @value: Value to remove from the BST.
  *
