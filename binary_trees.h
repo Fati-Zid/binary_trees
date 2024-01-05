@@ -177,4 +177,43 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
+/* ADVANCED:*/
+
+/**
+ * binary_trees_ancestor - function that checks an ancestor
+ * @first: First node
+ * @second: Second node
+ * Return: the node of the ancestor
+ */
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+
+/**
+ * binary_tree_levelorder - print the nodes element in a lever-order
+ * @tree: root node
+ * @func: function to use
+ * Return: Nothing
+ */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+
+/**
+ * binary_tree_is_complete - Function that checks if a binary tree is complete
+ * @tree: Type pointer of node of the tree
+ * Return: 1 if is complete 0 if it is not
+ */
+int binary_tree_is_complete(const binary_tree_t *tree);
+
+/**
+ * binary_tree_rotate_left - Function that  rotates left the binary tree.
+ * @tree: The root node of the three
+ * Return: Pointer node of the new node
+ */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/**
+ * binary_tree_rotate_right - Function that  rotates right the binary tree.
+ * @tree: The root node of the three
+ * Return: Pointer node of the new node
+ */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 #endif /* BINARY_TREES_H */
