@@ -140,4 +140,41 @@ size_t binary_tree_leaves(const binary_tree_t *tree);
  * Return: number of nodes with children
  */
 size_t binary_tree_nodes(const binary_tree_t *tree);
+
+/**
+ * binary_tree_balance - Measures balance factor of a binary tree
+ * @tree: tree to go through
+ * Return: balanced factor
+ */
+binary_tree_balance(const binary_tree_t *tree);
+
+/**
+ * binary_tree_is_full - function that says if a tree is full or not
+ * a tree is full if it has tow or none children
+ * @tree: tree to check
+ * Return: 1 if it is a full 0 if not
+ */
+int binary_tree_is_full(const binary_tree_t *tree);
+
+/**
+ * binary_tree_is_perfect - perfect or not a tree
+ * @tree: tree to check
+ * Return: 1 is it is or 0 if not
+ */
+int binary_tree_is_perfect(const binary_tree_t *tree);
+
+/**
+ * binary_tree_sibling - function that finds if a node is sibling
+ * @node: node to check
+ * Return: The sibling node
+ */
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+/**
+ * binary_tree_uncle - function that finds if a node is sibling
+ * @node: node to check
+ * Return: The uncle node
+ */
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
 #endif /* BINARY_TREES_H */
