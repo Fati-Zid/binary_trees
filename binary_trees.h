@@ -81,4 +81,12 @@ int binary_tree_is_leaf(const binary_tree_t *node);
  */
 int binary_tree_is_root(const binary_tree_t *node);
 
+/**
+ * binary_tree_preorder -  function that goes through a binary tree using pre-order traversal.
+ * @tree: is a pointer to the root node of the tree to traverse.
+ * @func:is a pointer to a function to call for each node. 
+ * Return: void.
+ */
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+
 #endif /* BINARY_TREES_H */
