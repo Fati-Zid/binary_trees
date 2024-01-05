@@ -24,6 +24,10 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
+typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s avl_t;
+typedef struct binary_tree_s heap_t;
+
 
 /**
  * binary_tree_node - Creates a binary tree node.
@@ -217,11 +221,56 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
  */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/**
+ * binary_tree_is_bst - Checks if a binary tree is a Binary Search Tree (BST).
+ * @tree: Pointer to the root node of the binary tree.
+ *
+ * Return: 1 if the tree is a BST, 0 otherwise.
+ */
 int binary_tree_is_bst(const binary_tree_t *tree);
+
+/**
+ * bst_insert - Inserts a value into a Binary Search Tree (BST).
+ * @tree: Pointer to the root node of the BST.
+ * @value: Value to insert into the BST.
+ *
+ * Return: A pointer to the created node, or NULL on failure.
+ */
 bst_t *bst_insert(bst_t **tree, int value);
+
+/**
+ * array_to_bst - Builds a Binary Search Tree (BST) from an array.
+ * @array: Pointer to the array of integers.
+ * @size: Size of the array.
+ *
+ * Return: A pointer to the root of the created BST.
+ */
 bst_t *array_to_bst(int *array, size_t size);
+
+/**
+ * bst_search - Searches for a value in a Binary Search Tree (BST).
+ * @tree: Pointer to the root node of the BST.
+ * @value: Value to search for in the BST.
+ *
+ * Return: A pointer to the node containing the value, or NULL if not found.
+ */
 bst_t *bst_search(const bst_t *tree, int value);
+
+/**
+ * bst_remove - Removes a node with a specific value from a Binary Search Tree (BST).
+ * @root: Pointer to the root of the BST.
+ * @value: Value to remove from the BST.
+ *
+ * Return: A pointer to the new root of the BST after removal.
+ */
 bst_t *bst_remove(bst_t *root, int value);
+
+/**
+ * binary_tree_is_avl - Checks if a binary tree is an AVL tree.
+ * @tree: Pointer to the root node of the binary tree.
+ *
+ * Return: 1 if the tree is an AVL tree, 0 otherwise.
+ */
 int binary_tree_is_avl(const binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
